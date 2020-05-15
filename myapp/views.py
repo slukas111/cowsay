@@ -25,4 +25,6 @@ def index(req):
     return render(req, 'index.html', {'form': form})
 
 
-
+def recent_ten(req):
+    recent_text = TextInput.objects.all().order_by('-pk')[:10]
+    return render(req, 'stock.html', {'recent_text': recent_text})

@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from myapp.urls import urlpatterns as cowapp_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
 ]
+urlpatterns += cowapp_urls

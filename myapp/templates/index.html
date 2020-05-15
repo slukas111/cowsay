@@ -1,0 +1,10 @@
+<h1>Cowsay App</h1>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <pre>
+    {{out_put}}
+</pre>
+    <button type="submit">submit</button>
+</form>
